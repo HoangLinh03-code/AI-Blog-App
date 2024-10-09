@@ -57,7 +57,7 @@ def yt_title(link):
     return title    
 
 def generate_blog_from_trans(transcript):
-    openai.api_key = "sk-ijajss53fK5rJL3ZleHIBZ21WHBoaoDDr3mvfMAUi6T3BlbkFJdHv2YlHcArNhD-X478toJ42Vyaf_pIjdHSUI4J_ZoA"
+    openai.api_key = "Your OpenAi Api key" #Go to openAI to get API 
     prompt = f"Based on the following transcript from a YouTube video, write a comprehensive blog article:\n\n{transcript}\n\nArticle:"
     # try:
     #     response = openai.Completion.create(
@@ -122,7 +122,7 @@ def get_transcript(link):
             print(f"Audio file downloaded: {media_audio_file}")
 
         # Step 3: Transcribe the audio file using AssemblyAI
-        aai.settings.api_key = "fd9d1155e9eb416fa181a20fd008b0db"
+        aai.settings.api_key = "Your Assembly AI API" # Go to AssemblyAI to get your API
         transcriber = aai.Transcriber()
         transcripts = transcriber.transcribe(media_audio_file)
         
